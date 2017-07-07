@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">BrawlStarDemo</string>
+
+    <string name="str_easyofuse">Easy Of Use</string>
+    <string name="str_range">Range</string>
+    <string name="str_accuracy">Accuracy</string>
+    <string name="str_power">Power</string>
+    <string name="str_mobility">Mobility</string>
+    <string name="str_stamina">Stamina</string>
+    <string name="str_utility">Utility</string>
+    <string name="str_crowd_control">Crowd Control</string>
+
+
+    <string name="str_name_star1">SMASH-GRAB</string>
+    <string name="str_name_star2">SHOWDOWN</string>
+    <string name="str_name_star3">HEIST</string>
+    <string name="str_name_star4">BOUNTY</string>
+
+    <string name="str_role_name1">TYPE</string>
+    <string name="str_role_name2">ROLE</string>
+    <string name="str_role_name3">SPEED</string>
+    <string name="str_role_name4">HITPOINTS</string>
+    <string name="str_role_name5">TIER</string>
+
+    <string name="watch_on_youtube">Watch on YouTube</string>
+
+</resources>

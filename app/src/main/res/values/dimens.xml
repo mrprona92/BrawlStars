@@ -1,0 +1,85 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="half_view_padding">4dp</dimen>
+    <dimen name="view_padding">8dp</dimen>
+
+    <dimen name="hero_skill_row_image_size">80dp</dimen>
+
+    <dimen name="carousel_width">183dp</dimen>
+    <dimen name="carousel_height">256dp</dimen>
+
+    <dimen name="carousel_anim_width">177dp</dimen>
+    <dimen name="carousel_anim_height">253dp</dimen>
+
+    <dimen name="carousel_main_attr_width">25dp</dimen>
+    <dimen name="carousel_main_attr_height">25dp</dimen>
+    <dimen name="carousel_main_attr_margin_top">5dp</dimen>
+    <dimen name="carousel_main_attr_margin_right">5dp</dimen>
+
+    <dimen name="carousel_name_margin_left">2dp</dimen>
+    <dimen name="carousel_name_margin_top">11dp</dimen>
+    <dimen name="carousel_name_text_size">13sp</dimen>
+
+    <dimen name="carousel_role_holder_width">40dp</dimen>
+    <dimen name="carousel_role_holder_height">30dp</dimen>
+
+    <dimen name="skill_role_holder_margin_bottom">10dp</dimen>
+    <dimen name="skill_role_holder_padding">1dp</dimen>
+    <dimen name="skill_role_bkg_size">36dp</dimen>
+    <dimen name="skill_role_size">34dp</dimen>
+
+    <dimen name="hero_row_textSize">10sp</dimen>
+    <dimen name="hero_row_text_width">90dp</dimen>
+
+    <dimen name="item_row_image_size">60dp</dimen>
+
+    <dimen name="hero_skill_affects_textSize">12sp</dimen>
+    <dimen name="hero_skill_name_textSize">16sp</dimen>
+
+    <dimen name="item_receipt_textSize">10sp</dimen>
+
+    <dimen name="match_player_summary_width">52dp</dimen>
+    <dimen name="match_player_summary_height">39dp</dimen>
+
+    <dimen name="skillbuild_image_size">60dp</dimen>
+
+    <dimen name="hero_row_width">128dp</dimen>
+    <dimen name="hero_row_height">62dp</dimen>
+
+
+    <!-- TEXT SIZE -->
+    <dimen name="text_smallest">9sp</dimen>
+    <dimen name="text_tabbar">10sp</dimen>
+    <dimen name="text_smaller">11sp</dimen>
+    <dimen name="text_small">12sp</dimen>
+    <dimen name="text_normal">14sp</dimen>
+    <dimen name="text_title">16sp</dimen>
+    <dimen name="text_large">22sp</dimen>
+
+    <!-- BUTTON SIZE -->
+    <dimen name="btn_height_medium">40dp</dimen>
+    <dimen name="btn_height_small">35dp</dimen>
+
+    <!-- PADDING -->
+    <dimen name="padding_min">1px</dimen>
+    <dimen name="padding_smaller">3dp</dimen>
+    <dimen name="padding_small">5dp</dimen>
+    <dimen name="padding_normal">10dp</dimen>
+    <dimen name="padding_medium">15dp</dimen>
+    <dimen name="padding_big">20dp</dimen>
+    <dimen name="padding_huge">30dp</dimen>
+
+
+    <!-- TABBAR -->
+
+    <!-- TOOL BAR -->
+    <dimen name="toolbar_bottom_height">55dp</dimen>
+
+    <!-- SPINNER -->
+
+    <!-- OTHER -->
+    <!-- 320px -->
+    <dimen name="avatar_smaller">40dp</dimen>
+</resources>

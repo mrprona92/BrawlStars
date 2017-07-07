@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="sms.sft.com.brawlstardemo.MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/main_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorHeroBackground1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/portrait_holder1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorHeroBackground1"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/half_view_padding">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/imgPortraitOverlay"
+                        android:layout_width="134dp"
+                        android:layout_height="155dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/avt_full_jessi" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minWidth="155dp"
+                    android:orientation="horizontal">
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.5"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/TextRoleBlackBottom"
+                            android:text="@string/str_role_name1" />
+
+                        <TextView
+                            style="@style/TextRoleBlackBottom"
+                            android:text="@string/str_role_name2" />
+
+                        <TextView
+                            style="@style/TextRoleBlackBottom"
+                            android:text="@string/str_role_name3" />
+
+                        <TextView
+                            style="@style/TextRoleBlackBottom"
+                            android:text="@string/str_role_name4" />
+
+                        <TextView
+                            style="@style/TextRoleBlackBottom"
+                            android:text="@string/str_role_name5" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/roles_holder"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:orientation="vertical" />
+
+                    <!--     <TextView
+                                 android:textSize="14sp"
+                                 android:id="@+id/txtRole"
+                                 android:drawableLeft="@drawable/carry"
+                                 android:text="Кэрри чувак"
+                                 android:layout_width="wrap_content"
+                                 android:layout_height="wrap_content"/>-->
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorHeroBackground3"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.25"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imgNameStar1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:paddingLeft="4dp"
+                        android:paddingRight="4dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/img1star" />
+
+                    <TextView
+                        android:id="@+id/txtNameStar1"
+                        style="@style/TextNameStar1White"
+                        android:text="@string/str_name_star1" />
+
+                    <TextView
+                        android:id="@+id/txtQuality1"
+                        style="@style/TextNameStar1White"
+                        android:text="Good" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.25"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imgNameStar2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:paddingLeft="4dp"
+                        android:paddingRight="4dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/img1star" />
+
+                    <TextView
+                        android:id="@+id/txtNameStar2"
+                        style="@style/TextNameStar1White"
+                        android:text="@string/str_name_star2" />
+
+                    <TextView
+                        android:id="@+id/txtQuality2"
+                        style="@style/TextNameStar1White"
+                        android:text="Good" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.25"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imgNameStar3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:paddingLeft="4dp"
+                        android:paddingRight="4dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/img1star" />
+
+                    <TextView
+                        android:id="@+id/txtNameStar3"
+                        style="@style/TextNameStar1White"
+                        android:text="@string/str_name_star3" />
+
+                    <TextView
+                        android:id="@+id/txtQuality3"
+                        style="@style/TextNameStar1White"
+                        android:text="Good" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.25"
+                    android:orientation="vertical">
+
+
+                    <ImageView
+                        android:id="@+id/imgNameStar4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:paddingLeft="4dp"
+                        android:paddingRight="4dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/img1star" />
+
+                    <TextView
+                        android:id="@+id/txtNameStar4"
+                        style="@style/TextNameStar1White"
+                        android:text="@string/str_name_star4" />
+
+                    <TextView
+                        android:id="@+id/txtQuality4"
+                        style="@style/TextNameStar1White"
+                        android:text="Good" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorHeroBackground2"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.25"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/TextPaddingBottom"
+                        android:text="@string/str_easyofuse" />
+
+                    <TextView
+                        style="@style/TextPaddingBottom"
+                        android:text="@string/str_range" />
+
+                    <TextView
+                        style="@style/TextPaddingBottom"
+                        android:text="@string/str_accuracy" />
+
+                    <TextView
+                        style="@style/TextPaddingBottom"
+                        android:text="@string/str_power" />
+
+                    <TextView
+                        style="@style/TextPaddingBottom"
+                        android:text="@string/str_mobility" />
+
+                    <TextView
+                        style="@style/TextPaddingBottom"
+                        android:text="@string/str_stamina" />
+
+                    <TextView
+                        style="@style/TextPaddingBottom"
+                        android:text="@string/str_utility" />
+
+                    <TextView
+                        style="@style/TextPaddingBottom"
+                        android:text="@string/str_crowd_control" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.75"
+                    android:orientation="vertical">
+
+                    <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
+                        android:id="@+id/progress_easeofuse"
+                        style="@style/ProgressBarColorFixedDimension" />
+
+                    <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
+                        android:id="@+id/progress_range"
+                        style="@style/ProgressBarColorFixedDimension"
+                        app:rcBackgroundPadding="5dp" />
+
+                    <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
+                        android:id="@+id/progress_accuracy"
+                        style="@style/ProgressBarColorFixedDimension"
+                        app:rcBackgroundPadding="5dp" />
+
+                    <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
+                        android:id="@+id/progress_power"
+                        style="@style/ProgressBarColorFixedDimension"
+                        app:rcBackgroundPadding="5dp" />
+
+                    <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
+                        android:id="@+id/progress_mobility"
+                        style="@style/ProgressBarColorFixedDimension"
+                        app:rcBackgroundPadding="5dp" />
+
+                    <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
+                        android:id="@+id/progress_stamina"
+                        style="@style/ProgressBarColorFixedDimension"
+                        app:rcBackgroundPadding="5dp" />
+
+                    <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
+                        android:id="@+id/progress_utility"
+                        style="@style/ProgressBarColorFixedDimension"
+                        app:rcBackgroundPadding="5dp" />
+
+                    <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
+                        android:id="@+id/progress_crowd_control"
+                        style="@style/ProgressBarColorFixedDimension"
+                        app:rcBackgroundPadding="5dp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtLore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/half_view_padding" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

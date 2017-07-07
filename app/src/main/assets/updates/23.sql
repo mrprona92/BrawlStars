@@ -1,0 +1,15 @@
+INSERT INTO hero(_id,localized_name,name) SELECT '1' as _id,'Jessie' as localized_name,'npc_brawl_hero_jessie' as name
+UNION ALL SELECT '2','Nita','npc_brawl_hero_nita'
+UNION ALL SELECT '3','Dynamike','npc_brawl_hero_dynamike'
+UNION ALL SELECT '4','El Primo','npc_brawl_hero_elprimo'
+UNION ALL SELECT '5','Mortis','npc_brawl_hero_mortis'
+UNION ALL SELECT '6','Crow','npc_brawl_hero_crow'
+UNION ALL SELECT '7','Poco','npc_brawl_hero_poco'
+UNION ALL SELECT '8','Bo','npc_brawl_hero_bo'
+UNION ALL SELECT '9','Shelly','npc_brawl_hero_shelly'
+UNION ALL SELECT '11','Colt','npc_brawl_hero_colt'
+UNION ALL SELECT '10','Bull','npc_brawl_hero_bull'
+UNION ALL SELECT '12','Brock','npc_brawl_hero_brock'
+UNION ALL SELECT '13','Ricochet','npc_brawl_hero_ricochet'
+UNION ALL SELECT '14','Spike','npc_brawl_hero_spike'
+UNION ALL SELECT '15','Barley','npc_brawl_hero_barley';

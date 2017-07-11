@@ -10,5 +10,6 @@
     <color name="colorHeroBackground4">#0F4323</color>
     <color name="colorWhite">#FFFFFF</color>
     <color name="colorBlack">#000000</color>
+    <color name="cmn_background_divider">#DDD</color>
 
 </resources>

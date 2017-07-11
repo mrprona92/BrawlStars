@@ -5,6 +5,28 @@ package sms.sft.com.brawlstardemo.responses;
  */
 
 public class DefaultAbilityInfo {
+    public DefaultAbilityInfo() {
+    }
+
+    private String description;
+    private String name;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
     private String typeAbility;
     private String range;
     private String timeCharger;

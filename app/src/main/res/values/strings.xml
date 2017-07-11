@@ -24,4 +24,13 @@
 
     <string name="watch_on_youtube">Watch on YouTube</string>
 
+
+
+    <string name="ability_lblSkillType">Skill Type Attack</string>
+    <string name="ability_lblRange">Range</string>
+    <string name="ability_lblRecharge">Recharge Time</string>
+    <string name="ability_lblDame">Damage</string>
+    <string name="ability_lblAttackDelay">Attack Delay</string>
+
+
 </resources>

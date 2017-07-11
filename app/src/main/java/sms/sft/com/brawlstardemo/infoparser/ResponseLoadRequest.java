@@ -17,8 +17,10 @@ import sms.sft.com.appbase.util.FileUtils;
 import sms.sft.com.appbase.util.service.TaskRequest;
 import sms.sft.com.brawlstardemo.BeanContainer;
 import sms.sft.com.brawlstardemo.dao.Hero;
+import sms.sft.com.brawlstardemo.responses.DefaultAbilityInfo;
 import sms.sft.com.brawlstardemo.responses.HeroInfo;
 import sms.sft.com.brawlstardemo.responses.Role5Info;
+import sms.sft.com.brawlstardemo.responses.SuperAbilityInfo;
 import sms.sft.com.brawlstardemo.service.HeroService;
 import sms.sft.com.brawlstardemo.util.Constants;
 
@@ -49,7 +51,7 @@ public class ResponseLoadRequest extends TaskRequest<String> {
 
     /*do not use /ru, otherwise you won't have items*/
     private List<HeroInfo> loadHeroResponses(Hero hero) throws Exception {
-        String heroName = hero.getLocalizedName().replace("'", "%27").replace(' ', '_');
+        String heroName = hero.getLocalizedName().replace("'", "%27").replace(' ', '-');
 
         String url = MessageFormat.format(Constants.Heroes.DOTA2_WIKI_RESPONSES_URL, heroName);
 
@@ -70,7 +72,11 @@ public class ResponseLoadRequest extends TaskRequest<String> {
         role5Info.setRole(doc.select(".overview>p").get(1).textNodes().get(0).toString());
         role5Info.setSpeed(doc.select(".overview>p").get(2).textNodes().get(0).toString());
         role5Info.setHitpoints(doc.select(".overview>p").get(3).textNodes().get(0).toString());
-        role5Info.setTier(doc.select(".overview>p").get(4).textNodes().get(0).toString());
+        if (!hero.getLocalizedName().equals("Ricochet")){
+            Log.d("BINH", "loadHeroResponses() called with: hero = [" + hero.getName() + "]");
+            role5Info.setTier(doc.select(".overview>p").get(4).textNodes().get(0).toString());
+        }
+
         heroInfo.setRole5Info(role5Info);
 
         //Progressbar
@@ -143,6 +149,43 @@ public class ResponseLoadRequest extends TaskRequest<String> {
         }
         heroInfo.setWeaknesses(weaknesssList);
 
+        //Tips
+        List<String> tipLists = new ArrayList<>();
+        Elements elementsTips = doc.select("ul.tips>li");
+        for (Element element : elementsWeaknesses) {
+            tipLists.add(element.text());
+        }
+        heroInfo.setTips(tipLists);
+
+        //Abilities
+        DefaultAbilityInfo mDefaultAbilityInfo = new DefaultAbilityInfo();
+        SuperAbilityInfo mSuperAbilityInfo = new SuperAbilityInfo();
+
+        mDefaultAbilityInfo.setName(doc.select("div.skill.pure-u-1").get(0).select("h3").text().substring(15));
+        mDefaultAbilityInfo.setDescription(doc.select("div.skill.pure-u-1").get(0).select("p").get(0).text());
+        mDefaultAbilityInfo.setTypeAbility(doc.select("div.skill.pure-u-1").get(0).select("p>span").get(0).text());
+        mDefaultAbilityInfo.setRange(doc.select("div.skill.pure-u-1").get(0).select("p>span").get(1).text());
+        mDefaultAbilityInfo.setTimeCharger(doc.select("div.skill.pure-u-1").get(0).select("p>span").get(2).text());
+        mDefaultAbilityInfo.setDamage(doc.select("div.skill.pure-u-1").get(0).select("p>span").get(3).text());
+        mDefaultAbilityInfo.setAttackDeplay(doc.select("div.skill.pure-u-1").get(0).select("p>span").get(4).text());
+        heroInfo.setmDefaultAbility(mDefaultAbilityInfo);
+
+        mSuperAbilityInfo.setName(doc.select("div.skill.pure-u-1").get(1).select("h3").text().substring(14));
+        mSuperAbilityInfo.setDescription(doc.select("div.skill.pure-u-1").get(1).select("p").get(0).text());
+        mSuperAbilityInfo.setTypeAbility(doc.select("div.skill.pure-u-1").get(1).select("p>span").get(0).text());
+        mSuperAbilityInfo.setRange(doc.select("div.skill.pure-u-1").get(1).select("p>span").get(1).text());
+        mSuperAbilityInfo.setDamage(doc.select("div.skill.pure-u-1").get(1).select("p>span").get(2).text());
+        mSuperAbilityInfo.setAttackDeplay(doc.select("div.skill.pure-u-1").get(1).select("p>span").get(3).text());
+        heroInfo.setmSuperAbility(mSuperAbilityInfo);
+
+        //Lore
+        heroInfo.setLore(doc.select("div.info.pure-u-1>p").get(0).text());
+
+        List<String> listModeRanking = new ArrayList<>();
+        for (int i = 0; i < 4; i++) {
+            listModeRanking.add(doc.select("div.pure-u-1.pure-u-md-1-4>div").get(i).attr("class").substring(23));
+        }
+        heroInfo.setModeRanking(listModeRanking);
 
         heroResponsesList.add(heroInfo);
 

@@ -1,0 +1,215 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/card_margin"
+        android:elevation="3dp"
+        card_view:cardCornerRadius="@dimen/card_album_radius">
+
+        <RelativeLayout
+            style="@style/Layout.FillWidth"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:padding="@dimen/padding_small">
+
+            <View
+                android:id="@+id/viewDividerTop"
+                style="@style/divider_common"
+                android:layout_marginLeft="@dimen/padding_medium"
+                android:layout_marginTop="30dp" />
+
+            <RelativeLayout
+                android:id="@+id/rlGuruPanelLeft"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true">
+
+                <ImageView
+                    android:id="@+id/thumbnail"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:scaleType="fitXY"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true" />
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/rlGuruPanelLeft"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:id="@+id/llInfoSkill"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/lblSkillTypeMain"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@string/ability_lblSkillType"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/lblSkillName"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="15dp"
+                        android:text="@string/ability_lblSkillType" />
+
+                    <TextView
+                        android:id="@+id/lblSkillInfo"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="15dp"
+                        android:text="@string/ability_lblSkillType"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/llSkillTypeAttack"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        style="@style/Layout.FillWidthForImage"
+                        android:src="@drawable/youtube_icon" />
+
+                    <TextView
+                        android:id="@+id/lblSkillType"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:text="@string/ability_lblSkillType" />
+
+                    <TextView
+                        android:id="@+id/lblSkillTypeValue"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/llRange"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        style="@style/Layout.FillWidthForImage"
+                        android:src="@drawable/youtube_icon" />
+
+                    <TextView
+                        android:id="@+id/lblRange"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:text="@string/ability_lblRange" />
+
+                    <TextView
+                        android:id="@+id/lblRangeValue"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llRechargeTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        style="@style/Layout.FillWidthForImage"
+                        android:src="@drawable/youtube_icon" />
+
+                    <TextView
+                        android:id="@+id/lblRecharge"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:text="@string/ability_lblRecharge" />
+
+                    <TextView
+                        android:id="@+id/lblRechargeValue"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llDame"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        style="@style/Layout.FillWidthForImage"
+                        android:src="@drawable/youtube_icon" />
+
+                    <TextView
+                        android:id="@+id/lblDame"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:text="@string/ability_lblDame" />
+
+                    <TextView
+                        android:id="@+id/lblDameValue"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llAttackDelay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        style="@style/Layout.FillWidthForImage"
+                        android:src="@drawable/youtube_icon" />
+
+                    <TextView
+                        android:id="@+id/lblAttackDelay"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:text="@string/ability_lblAttackDelay" />
+
+                    <TextView
+                        android:id="@+id/lblAttackDelayValue"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

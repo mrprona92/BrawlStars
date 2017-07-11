@@ -15,7 +15,7 @@ import sms.sft.com.brawlstardemo.BeanContainer;
  */
 public class Helper extends SQLiteOpenHelper {
     public static final String DATABASE_NAME = "brawlassistant.db";
-    public static final int DATABASE_VERSION = 4;
+    public static final int DATABASE_VERSION = 5;
     private Context mContext;
 
     /*public static final String CREATE_ITEMS_FROM="create table if not exists "+

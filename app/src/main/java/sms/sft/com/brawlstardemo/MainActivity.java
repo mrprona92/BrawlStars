@@ -56,13 +56,12 @@ public class MainActivity extends AppCompatActivity implements RequestListener<S
             mSpiceManager.start(getApplicationContext());
             final int currentVersion = localUpdateService.getVersion(getApplicationContext());
             if (currentVersion != Helper.DATABASE_VERSION) {
-               /* Handler handlerTimer = new Handler();
+               Handler handlerTimer = new Handler();
                 handlerTimer.postDelayed(new Runnable() {
                     public void run() {
                         callUpdateResquest();
                     }
-                }, 5000);*/
-                runTask();
+                }, 0);
             } else {
                 runTask();
             }
@@ -88,7 +87,7 @@ public class MainActivity extends AppCompatActivity implements RequestListener<S
         switch (mCurLoadType) {
             case response:
                 mSpiceManager.execute(new ResponseLoadRequest(getApplicationContext()), this);
-                break;
+                break; 
         }
     }
 

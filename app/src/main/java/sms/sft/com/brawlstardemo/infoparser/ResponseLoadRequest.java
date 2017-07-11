@@ -58,12 +58,12 @@ public class ResponseLoadRequest extends TaskRequest<String> {
         }
         System.out.println("hero url: " + url);*/
         Document doc = Jsoup.connect(url).get();
-        Element content = doc.select("div#content").first();
 
         List<HeroInfo> heroResponsesList = new ArrayList<>();
 
         HeroInfo heroInfo = new HeroInfo();
 
+        heroInfo.setHero(hero);
         //Role 5 info
         Role5Info role5Info = new Role5Info();
         role5Info.setType(doc.select(".overview>p").get(0).textNodes().get(0).toString());
@@ -84,8 +84,6 @@ public class ResponseLoadRequest extends TaskRequest<String> {
         heroInfo.setProgress8Info(progressList);
 
 
-
-
         //modeRanking
 
         //Priority
@@ -94,21 +92,39 @@ public class ResponseLoadRequest extends TaskRequest<String> {
         for (Element element : elementsPriority) {
             priorityList.add(element.text());
         }
-        heroInfo.setStrengths(priorityList);
+        heroInfo.setPriority(priorityList);
 
-        //Priority
-        List<String> favorableList = new ArrayList<>();
-        Elements elementsFavorable = doc.select("ul.priority>li");
-        for (Element element : elementsFavorable) {
-            priorityList.add(element.text());
+        //Favorable
+
+        Elements listCharacter = doc.select("ul.character-list");
+        int index = 0;
+        for (Element element : listCharacter) {
+            if (index == 0) {
+                List<String> favorableList = new ArrayList<>();
+                Elements elementsFavorable = element.getAllElements().select("div.title");
+                for (Element elementFavor : elementsFavorable) {
+                    favorableList.add(elementFavor.text());
+                }
+                heroInfo.setFavorableMatchups(favorableList);
+            } else if (index == 1) {
+                //difficultMatchups;
+                List<String> difficultLists = new ArrayList<>();
+                Elements elementsDifficults = element.getAllElements().select("div.title");
+                for (Element elementDifficults : elementsDifficults) {
+                    difficultLists.add(elementDifficults.text());
+                }
+                heroInfo.setDifficultMatchups(difficultLists);
+            } else {
+                //hardCounters;
+                List<String> hardCountersLists = new ArrayList<>();
+                Elements elementsHardCounters = element.getAllElements().select("div.title");
+                for (Element elementCounters : elementsHardCounters) {
+                    hardCountersLists.add(elementCounters.text());
+                }
+                heroInfo.setHardCounters(hardCountersLists);
+            }
+            index++;
         }
-        heroInfo.setStrengths(priorityList);
-
-
-        //difficultMatchups;
-
-
-        //hardCounters;
 
 
         //Strength
@@ -125,8 +141,7 @@ public class ResponseLoadRequest extends TaskRequest<String> {
         for (Element element : elementsWeaknesses) {
             weaknesssList.add(element.text());
         }
-        heroInfo.setStrengths(weaknesssList);
-
+        heroInfo.setWeaknesses(weaknesssList);
 
 
         heroResponsesList.add(heroInfo);

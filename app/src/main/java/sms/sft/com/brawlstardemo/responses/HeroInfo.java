@@ -3,6 +3,8 @@ package sms.sft.com.brawlstardemo.responses;
 import java.io.Serializable;
 import java.util.List;
 
+import sms.sft.com.brawlstardemo.dao.Hero;
+
 /**
  * Created by ABadretdinov
  * 19.06.2015
@@ -11,12 +13,27 @@ import java.util.List;
 
 
 public class HeroInfo implements Serializable {
-    private String brawlID;
-    private String id;
     private String img;
     private String dname;
     private String lore;
+    private DefaultAbilityInfo mDefaultAbility;
+    private SuperAbilityInfo mSuperAbility;
 
+    public DefaultAbilityInfo getmDefaultAbility() {
+        return mDefaultAbility;
+    }
+
+    public void setmDefaultAbility(DefaultAbilityInfo mDefaultAbility) {
+        this.mDefaultAbility = mDefaultAbility;
+    }
+
+    public SuperAbilityInfo getmSuperAbility() {
+        return mSuperAbility;
+    }
+
+    public void setmSuperAbility(SuperAbilityInfo mSuperAbility) {
+        this.mSuperAbility = mSuperAbility;
+    }
 
     private Role5Info role5Info;
 
@@ -37,25 +54,8 @@ public class HeroInfo implements Serializable {
     private List<String> strengths;
     private List<String> weaknesses;
     private List<String> tips;
+    private Hero hero;
 
-
-
-
-    public String getBrawlID() {
-        return brawlID;
-    }
-
-    public void setBrawlID(String brawlID) {
-        this.brawlID = brawlID;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
 
     public String getImg() {
         return img;
@@ -154,5 +154,13 @@ public class HeroInfo implements Serializable {
     }
 
     public HeroInfo() {
+    }
+
+    public Hero getHero() {
+        return hero;
+    }
+
+    public void setHero(Hero hero) {
+        this.hero = hero;
     }
 }
